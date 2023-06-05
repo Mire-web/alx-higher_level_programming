@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PYCODE" > script.py && python3 script.py
+python3 $PYCODE
