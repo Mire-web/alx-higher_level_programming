@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 import this
-str = this
+str = ""
 print(str)
