@@ -50,6 +50,13 @@ listint_t *insert_node(listint_t **head, int number)
 	return (new_node);
 }
 
+/**
+ * check_list - check if list is empty
+ *
+ * @head: head node
+ * Return: int
+ */
+
 int check_list(listint_t **head)
 {
 	if (!*head)
@@ -58,6 +65,14 @@ int check_list(listint_t **head)
 		return (0);
 }
 
+/**
+ * create_node - Create a node object
+ *
+ * @node: new node
+ * @number: new data
+ * Return: listint_t*
+ */
+
 listint_t *create_node(listint_t *node, int number)
 {
 	node = (listint_t *) malloc(sizeof(listint_t));
@@ -65,5 +80,5 @@ listint_t *create_node(listint_t *node, int number)
 	return (NULL);
 	node->n = number;
 	node->next = NULL;
-	return(node);
+	return (node);
 }
