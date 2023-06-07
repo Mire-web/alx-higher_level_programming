@@ -5,4 +5,4 @@ for i in range(122, 96, -1):
             odd = 0
         else:
             odd = 32
-        print(chr(i - odd), end="")
+        print('{}'.format(chr(i - odd)), end="")
