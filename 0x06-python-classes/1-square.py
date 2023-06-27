@@ -3,6 +3,7 @@
 # Mire E Amah <amahe8664@gmail.com>
 """Creates a class Square."""
 
+
 class Square:
     """Define the square"""
     def __init__(self, size):
