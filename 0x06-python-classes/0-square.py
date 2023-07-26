@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-# 0-square.py
-# Mire E Amah <amahe8664@gmail.com>
-"""Define a class Square."""
-
-
 class Square:
-    """Represents a square."""
+    """A class representing a Square with all it's properties
+    """
     pass

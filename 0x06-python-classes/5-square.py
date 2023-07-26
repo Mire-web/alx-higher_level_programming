@@ -1,38 +1,59 @@
 #!/usr/bin/python3
-"""Define a class Square."""
-
-
+"""
+Author: Mire
+Description: A Sqaure class project for Alx
+"""
 class Square:
-    """Represent a square."""
+    """
+    A class defining a square with all it's properties
+    Attribute:
+       _Square__size: Size of the sqaure
+    """
+    def __init__(self, size=0):
+        self._Square__size = size
 
-    def __init__(self, size):
-        """Initialize a new square.
-        Args:
-            size (int): The size of the new square.
+    def area(self):
+        """ 
+        Calculates the area of a Square.
+        
+        Returns:
+              int: the area of a square.
         """
-        self.size = size
+        return self._Square__size ** 2
 
     @property
     def size(self):
-        """Get/set the current size of the square."""
-        return (self.__size)
-
+        """
+        Gets the size of the square  object
+        Returns:
+            _Square__size: size of the square
+        """
+        return self._Square__size
     @size.setter
     def size(self, value):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
+        """
+        Sets the value of the square size
+        """
+        if type(value) == int and value >= 0:
+            self._Square__size = value
+        elif type(value) == int and value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
-
-    def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+        else:
+            raise TypeError("size must be an integer")
 
     def my_print(self):
-        """Print the square with the # character."""
-        for i in range(0, self.__size):
-            [print("#", end="") for j in range(self.__size)]
+        """
+        Prints out the square
+        """
+        if self._Square__size == 0:
             print("")
-        if self.__size == 0:
-            print("")
+        else:
+            row = self._Square__size
+            column = self._Square__size
+            while row > 0:
+                while column > 0:
+                    print("#", end="")
+                    column -= 1
+                print("")
+                column = self._Square__size
+                row -= 1

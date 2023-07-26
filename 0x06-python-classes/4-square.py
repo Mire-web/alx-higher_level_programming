@@ -1,29 +1,42 @@
 #!/usr/bin/python3
-""" Creating a square class """
-
-
+"""
+Author: Mire
+Description: A Sqaure class project for Alx
+"""
 class Square:
-    """ Defining a class square """
+    """
+    A class defining a square with all it's properties
+    Attribute:
+       _Square__size: Size of the sqaure
+    """
     def __init__(self, size=0):
-        """ Initializing a square class
-        Args: size=0: size of the square
-         """
-        self.__size = size
+        self._Square__size = size
+
+    def area(self):
+        """ 
+        Calculates the area of a Square.
+        
+        Returns:
+              int: the area of a square.
+        """
+        return self._Square__size ** 2
 
     @property
     def size(self):
-        """ Getting the size of the square """
-        return self.__size
-
+        """
+        Gets the size of the square  object
+        Returns:
+            _Square__size: size of the square
+        """
+        return self._Square__size
     @size.setter
     def size(self, value):
-        """ Setting the size of the square """
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        if value < 0:
+        """
+        Sets the value of the square size
+        """
+        if type(value) == int and value >= 0:
+            self._Square__size = value
+        elif type(value) == int and value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
-
-    def area(self):
-        """ Calculating the area of the square """
-        return (self.__size ** 2)
+        else:
+            raise TypeError("size must be an integer")
