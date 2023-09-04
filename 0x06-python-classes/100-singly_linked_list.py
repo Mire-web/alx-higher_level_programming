@@ -31,6 +31,7 @@ class Node:
         if type(value) == Node:
             self._next__node = value
         else:
+            print(type(value))
             raise TypeError("next_node must be a Node object")
 
 class SinglyLinkedList:
@@ -39,7 +40,6 @@ class SinglyLinkedList:
     """
     def __init__(self):
         self._head = None
-        self._element = []
 
     def sorted_insert(self, value):
         new_node = Node(value)
@@ -47,9 +47,15 @@ class SinglyLinkedList:
             self._head = new_node
         else:
             current = self._head
-            self._head = new_node
-            current._next__node = self._head
-        self._element.append(self._head)
+            while current.next_node:
+                if current.next_node.data >= new_node.data:
+                    break
+                current = current.next_node
+            new_node.next_node = current.next_node
+            current.next_node = new_node
 
     def __str__(self):
-        return self._element.sort(key=self._head.data)
+        current = self._head
+        while current:
+            print(current.data)
+            current = current.next_node
