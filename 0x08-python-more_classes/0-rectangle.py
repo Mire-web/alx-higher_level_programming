@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Rectangle module"""
+"""
+Rectancle Module
+=================
+Author: Mire
+"""
 
 
 class Rectangle:
-    """ Rectangle class"""
+
     pass
