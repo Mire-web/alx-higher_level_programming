@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-""" New class """
+"""
+My integer class
+Author: Mire
+"""
 
 
 class MyInt(int):
-    """ My int inherits from int """
-    def __eq__(self, num):
-        """ Function for equals """
-        return(int(self) != int(num))
+    """My Int Class"""
 
-    def __ne__(self, num):
-        """ Function for not equals """
-        return (int(self) == int(num))
+    def __eq__(self, other):
+        """My equality method"""
+        return self.real != other
+
+    def __ne__(self,  other):
+        """My inequality method"""
+        return self.real == other

@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" Function that adds a new attribute to an object if it’s possible """
+"""
+Class Attribute Adder
+Author: Mire
+"""
 
 
-def add_attribute(obj, name, value):
-    """ Function for add attribute"""
-    if hasattr(obj, '__dict__') is False:
+def add_attribute(obj, key, value):
+    """Adds Attribute to a class"""
+    if hasattr(obj, '__dict__') or (hasattr(type(obj), '__slots__') and
+                                    key in type(obj).__slots__):
+        setattr(obj, key, value)
+    else:
         raise TypeError("can't add new attribute")
-
-    setattr(obj, name, value)
