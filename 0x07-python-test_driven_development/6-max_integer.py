@@ -3,17 +3,16 @@
 """
 
 
-
-def max_integer(list=[]):
-    """Function to find and return the max integer in a list of integers
-        If the list is empty, the function returns None
-    """
-    if len(list) == 0:
-        return None
-    result = list[0]
-    i = 1
-    while i < len(list):
-        if list[i] > result:
-            result = list[i]
-        i += 1
-    return result
+def max_integer(mlist=[]):
+        """Function to find and return the max integer in a list of integers
+           If the list is empty, the function returns None
+        """
+        if len(mlist) == 0:
+            return None
+        result = mlist[0]
+        i = 1
+        while i < len(mlist):
+                if mlist[i] > result:
+                        result = mlist[i]
+                i += 1
+        return result
