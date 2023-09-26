@@ -23,3 +23,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """Test empty list input"""
         self.assertEqual(max_integer([]), None)
+
+    def test_single_element(self):
+        """Test for single element list input"""
+        self.assertEqual(max_integer([3]), 3)
