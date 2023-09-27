@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-max_integer = __import__('6-max_integer').max_integer
+matrix_mul = __import__('100-matrix_mul').matrix_mul
 
-print(max_integer([1, 2, 3, 4]))
-print(max_integer([1, 2, 5, 4]))
-print(max_integer([1, 3, 2, 4]))
-print(max_integer([2, 3, 5, 6]))
+print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
