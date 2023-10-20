@@ -1,4 +1,4 @@
--- removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
--- The database name will be passed as an argument of the mysql command
+-- Removes all records with a score <= 5 int he table second_table of hbtn_0c_0 database
 
-DELETE FROM second_table WHERE score <=5;
+DELETE FROM second_table
+WHERE score <= 5;
