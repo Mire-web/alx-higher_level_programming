@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
-let myVar = Number(argv[2]);
+
+let myVar = Number(porcess.argv[2]);
 let row = myVar;
 let result = '';
 if (myVar) {
