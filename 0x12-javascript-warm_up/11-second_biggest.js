@@ -1,14 +1,14 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+
 let maxi = 0;
 let secondMaxi = 0;
-if (argv.length === 3) {
+if (process.argv.length === 3) {
   console.log(0);
-} else if (argv.length > 3) {
-  for (let i = 0; i < argv.length; i++) {
-    if (argv[i] > maxi) {
+} else if (process.argv.length > 3) {
+  for (let i = 0; i < process.argv.length; i++) {
+    if (process.argv[i] > maxi) {
       secondMaxi = maxi;
-      maxi = argv[i];
+      maxi = process.argv[i];
     }
   }
   console.log(secondMaxi);
