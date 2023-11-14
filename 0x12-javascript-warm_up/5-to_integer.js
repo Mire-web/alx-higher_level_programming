@@ -1,7 +1,6 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
 
-const myVar = 'My number: ' + Number(argv[2]);
+const myVar = 'My number: ' + Number(process.argv[2]);
 
 if (Number(argv[2])) {
   console.log(myVar);
