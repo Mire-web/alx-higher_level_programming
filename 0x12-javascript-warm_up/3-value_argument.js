@@ -2,7 +2,7 @@
 
 const { argv } = require('node:process');
 
-let myVar = argv[2];
+const myVar = argv[2];
 
 if (myVar) {
   console.log(myVar);
