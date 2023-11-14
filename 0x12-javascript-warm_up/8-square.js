@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let myVar = Number(porcess.argv[2]);
+let myVar = Number(process.argv[2]);
 let row = myVar;
 let result = '';
 if (myVar) {
