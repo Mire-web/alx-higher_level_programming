@@ -1,0 +1,12 @@
+#!/usr/bin/node
+const { argv } = require('node:process');
+let myVar = Number(argv[2]);
+let row = myVar;
+if (myVar) {
+  while (myVar > 0) {
+    console.log('X' * row);
+    myVar--;
+  }
+} else {
+  console.log('Missing size');
+}
