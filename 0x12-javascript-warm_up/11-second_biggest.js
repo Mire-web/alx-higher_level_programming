@@ -1,17 +1,10 @@
 #!/usr/bin/node
 
-let maxi = 0;
-let secondMaxi = 0;
 if (process.argv.length === 3) {
   console.log(0);
 } else if (process.argv.length > 3) {
-  for (let i = 0; i < process.argv.length; i++) {
-    if (process.argv[i] > maxi) {
-      secondMaxi = maxi;
-      maxi = process.argv[i];
-    }
-  }
-  console.log(secondMaxi);
+  const args = process.argv.map(Number).slice(2, process.argv.length).sort((a, b) => a - b);
+  console.log(args[args.length - 2]);
 } else {
   console.log(0);
 }
