@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
 
-const myVar = argv[2] + ' is ' + argv[3];
+const myVar = process.argv[2] + ' is ' + process.argv[3];
 console.log(myVar);
