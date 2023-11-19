@@ -24,10 +24,11 @@ WHERE states.name = %(state_name)s)", {'state_name': state_name})
     for item in items:
         for one in item:
             if count == len(items):
-                print(one)
+                print(one, end="")
             else:
                 print(one, end=", ")
                 count += 1
+    print()
 
     cur.close()
     db.close()
