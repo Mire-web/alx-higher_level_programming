@@ -20,7 +20,7 @@ def main(username, password, db_name, state_name):
 WHERE cities.state_id = (SELECT states.id FROM states \
 WHERE states.name = %(state_name)s)", {'state_name': state_name})
     items = cur.fetchall()
-    count = 1;
+    count = 1
     for item in items:
         for one in item:
             if count == len(items):
