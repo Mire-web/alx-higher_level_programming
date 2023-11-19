@@ -19,7 +19,7 @@ def main(username, password, database, name):
     )
     cur = db.cursor()
     cur.execute(("SELECT * FROM states \
-WHERE states.name = '{}' ORDER BY states.id").format(name))
+WHERE BINARY states.name = '{}' ORDER BY states.id").format(name))
     items = cur.fetchall()
     for item in items:
         print(item)
