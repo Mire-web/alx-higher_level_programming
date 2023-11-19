@@ -4,8 +4,10 @@ Lists all states in the sql database
 Author: Mire
 """
 
+
 import MySQLdb as sql
 import sys
+
 
 def main(username, password, database):
     """
@@ -14,7 +16,8 @@ def main(username, password, database):
     password: user acct password
     database: database name
     """
-    db = sql.connect(host="localhost", user=username, passwd=password, db=database, port=3306)
+    db = sql.connect(host="localhost", user=username,
+                     passwd=password, db=database, port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
     items = cur.fetchall()
