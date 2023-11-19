@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+
+
+import MySQLdb as sql
+import sys
+
+def main(username, password, database):
+    db = sql.connect(host="localhost", user=username, passwd=password, db=database, port=3306)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
+    items = cur.fetchall()
+    for item in items:
+        print(item)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
