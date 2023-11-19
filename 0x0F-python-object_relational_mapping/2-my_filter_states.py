@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Filter the database for states starting with "N"
+Filter the database for states matching user input
 Author: Mire
 """
 
@@ -18,8 +18,8 @@ def main(username, password, database, name):
         port=3306
     )
     cur = db.cursor()
-    cur.execute(f"SELECT * FROM states \
-WHERE states.name = '{name}' ORDER BY states.id")
+    cur.execute(("SELECT * FROM states \
+WHERE states.name = '{}' ORDER BY states.id").format(name))
     items = cur.fetchall()
     for item in items:
         print(item)
