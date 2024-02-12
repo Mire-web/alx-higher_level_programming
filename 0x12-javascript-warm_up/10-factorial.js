@@ -4,8 +4,8 @@ if (!Number(process.argv[2])) {
 } else {
   console.log(factorial(process.argv[2]));
 }
-function factorial(a) {
-  let result = 1;
+function factorial (a) {
+  const result = 1;
   if (a <= 1) {
     return result;
   } else {

@@ -1,4 +1,0 @@
-#!/usr/bin/node
-const newArr = process.argv.slice(2,);
-newArr.sort((a,b)=> b - a)
-console.log(newArr[1]);
