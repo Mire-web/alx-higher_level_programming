@@ -5,6 +5,5 @@ fs.readFile(process.argv[2], 'utf8', (err, data) => {
     fs.appendFile(process.argv[4], data, (err) => {
 	if (err) throw err;
     });
-    }
+    })
 })
-console.log(fileOne)
