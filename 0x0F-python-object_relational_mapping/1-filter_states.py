@@ -20,3 +20,5 @@ if __name__ == '__main__':
                 ORDER BY states.id ASC")
     for item in cur.fetchall():
         print(item)
+    cur.close()
+    db.close()

@@ -21,3 +21,5 @@ if __name__ == '__main__':
                 ORDER BY id ASC".format(args[4]))
     for item in cur.fetchall():
         print(item)
+    cur.close()
+    db.close()

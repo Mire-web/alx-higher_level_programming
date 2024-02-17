@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """
 AUTHor: MIre-web
-Desc: Return states that match user input
+Desc: Return states that match user input while preventing sql injection
 Date: 17/02/2024
 """
 import MySQLdb
@@ -21,3 +21,5 @@ if __name__ == '__main__':
                 ORDER BY id ASC".format(args[4]))
     for item in cur.fetchall():
         print(item)
+    cur.close()
+    db.close()
