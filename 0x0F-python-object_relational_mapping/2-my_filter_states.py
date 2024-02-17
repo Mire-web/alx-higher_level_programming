@@ -1,22 +1,23 @@
 #!/usr/bin/python
 """
-AUTHOR: MIRE-WEB
-Desc: Print all states starting with N
+AUTHor: MIre-web
+Desc: Return states that match user input
 Date: 17/02/2024
 """
 import MySQLdb
 import sys
 
 
+args = sys.argv
 if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost',
-                         user=sys.argv[1],
+                         user=args[1],
                          port=3306,
-                         passwd=sys.argv[2],
-                         db=sys.argv[3])
+                         passwd=args[2],
+                         db=args[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states\
-                WHERE states.name LIKE 'N%'\
-                ORDER BY states.id ASC")
+                WHERE name = {}\
+                ORDER BY id ASC".format(args[4]))
     for item in cur.fetchall():
         print(item)
