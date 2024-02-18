@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
-AUTHor: MIre-web
+AUTHor: Mire-web
 Desc: Return states that match user input while preventing sql injection
 Date: 17/02/2024
 """
@@ -16,9 +16,8 @@ if __name__ == '__main__':
                          passwd=args[2],
                          db=args[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states\
-                WHERE name = \'{}\'\
-                ORDER BY id ASC".format(args[4]))
+    query = "SELECT * FROM states WHERE states.name = %s"
+    cur.execute(query, (args[4],))
     for item in cur.fetchall():
         print(item)
     cur.close()
