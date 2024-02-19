@@ -24,9 +24,12 @@ if __name__ == '__main__':
              ORDER BY cities.id ASC"
     cur.execute(query, (args[4],))
     cities = cur.fetchall()
-    for idx, item in enumerate(cities):
-        for city in item:
-            if idx < len(cities) - 1:
-                print(city, end=', ')
-            else:
-                print(city)
+    if len(cities) > 0:
+        for idx, item in enumerate(cities):
+            for city in item:
+                if idx < len(cities) - 1:
+                    print(city, end=', ')
+                else:
+                    print(city)
+    else:
+        print()
