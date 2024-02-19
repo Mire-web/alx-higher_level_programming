@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 AUTHOR: MIRE-WEB
 Desc: Print all states starting with N
