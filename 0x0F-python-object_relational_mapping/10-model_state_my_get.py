@@ -6,7 +6,7 @@ Date: 20/02/2024
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base,State
+from model_state import Base, State
 import sys
 
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).filter(State.name == '{}'.\
+    result = session.query(State).filter(State.name == '{}'.
                                          format(args[4])).first()
     if result:
         print(result.id)
