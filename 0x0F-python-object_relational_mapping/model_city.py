@@ -9,7 +9,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 
-
 class City(Base):
     """City class
        Columns: Id, name and state_id
