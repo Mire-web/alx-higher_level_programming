@@ -12,7 +12,7 @@ import sys
 
 args = sys.argv
 if __name__ == '__main__':
-    engine = create_engine('mysql+mysqldb:{}:{}@localhost:3306/{}'.
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(args[1], args[2], args[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
