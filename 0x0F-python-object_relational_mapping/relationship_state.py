@@ -7,6 +7,7 @@ Date: 20/02/2024
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
+from relationship_city import City
 
 Base = declarative_base()
 
