@@ -19,6 +19,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     cities = session.query(State).join(City).order_by(City.id.asc()).all()
-    for city in cities:
-        for city in city.cities:
-            print(city.name)
+    for state in cities:
+        for city in state.cities:
+            print(f'{state.name}: ({city.id}) {city.name}')
