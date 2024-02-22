@@ -20,4 +20,5 @@ if __name__ == '__main__':
     session = Session()
     cities = session.query(State).join(City).order_by(City.id.asc()).all()
     for city in cities:
-        print(city.cities.name)
+        for city in city.cities:
+            print(city.name)
