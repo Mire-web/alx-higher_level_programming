@@ -4,9 +4,8 @@ Author: Mire-web
 Desc: Definition of State an dInstance of base
 Date: 20/02/2024
 """
-from model_state import Base, State
+from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
 
 
 class City(Base):

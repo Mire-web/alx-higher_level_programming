@@ -14,7 +14,7 @@ import sys
 args = sys.argv
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(args[1], args[2], args[3]))
+                           format(args[1], args[2], args[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
@@ -22,5 +22,6 @@ if __name__ == '__main__':
     new_city = City(name="San Francisco")
     new_state.cities.append(new_city)
     session.add(new_state)
+    session.add(new_city)
     session.commit()
     session.close()
