@@ -6,8 +6,8 @@ Date: 22/02/2024
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_state import State, Base
 from relationship_city import City
+from relationship_state import State, Base
 import sys
 
 
@@ -18,9 +18,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
+    city = City()
     state = State()
     state.name = "California"
-    city = City()
     city.name = "San Francisco"
     city.state_id = state.id
     add_all = [state, city]
