@@ -6,7 +6,11 @@ a Base class to work with MySQLAlchemy ORM.
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
+<<<<<<< HEAD
 from sqlalchemy.ext.declarative import declarative_base
+=======
+
+>>>>>>> parent of 50f5148 (100)
 
 Base = declarative_base()
 
