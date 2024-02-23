@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 """
-This script defines a State class and
-a Base class to work with MySQLAlchemy ORM.
+Author: Mire-web
+Desc: Definition of State an dInstance of base
+Date: 20/02/2024
 """
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-<<<<<<< HEAD
 from sqlalchemy.ext.declarative import declarative_base
-=======
-
->>>>>>> parent of 50f5148 (100)
 
 Base = declarative_base()
 

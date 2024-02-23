@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This script defines a City class
-to work with MySQLAlchemy ORM.
+Author: Mire-web
+Desc: Definition of State an dInstance of base
+Date: 20/02/2024
 """
 
 from relationship_state import Base, State
