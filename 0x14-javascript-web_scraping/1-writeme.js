@@ -1,11 +1,10 @@
 #!/usr/bin/node
-
+// Write data to file
 const fs = require('fs');
-const filename = process.argv[2];
-const content = process.argv[3];
+const args = process.argv;
 
-fs.writeFile(filename, content, 'utf-8', (error) => {
-  if (error) {
-    console.log(error);
+fs.writeFile(args[2], args[3], 'utf-8', (err) => {
+  if (err) {
+    console.log(err);
   }
 });
