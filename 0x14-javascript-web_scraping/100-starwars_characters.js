@@ -1,26 +1,22 @@
 #!/usr/bin/node
-
+/*
+Script to return all characters in a starwars movie
+AUTHOR: MIRE-WEB
+*/
 const request = require('request');
 
-const movieId = process.argv[2];
-const url = `https://swapi.dev/api/films/${movieId}/`;
-
-request.get(url, (error, response, body) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
-
-  const data = JSON.parse(body);
-  const characters = data.characters;
-  for (const character of characters) {
-    request(character, (error, response, body) => {
-      if (error) {
-        console.log(error);
-        return;
+request(`https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`,
+  (err, res, body) => {
+    if (err) throw err;
+    else {
+      const characters = JSON.parse(body).characters;
+      for (const character of characters) {
+        request(character, (err, res, body) => {
+          if (err) throw err;
+          else {
+            console.log(JSON.parse(body).name);
+          }
+        });
       }
-      const characterData = JSON.parse(body);
-      console.log(characterData.name);
-    });
-  }
-});
+    }
+  });
